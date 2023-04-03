@@ -10,7 +10,7 @@ jobs:
         working-directory: network 
       defaults:
         run:
-          shell: bash
+          #shell: bash
           working-directory: ${{ env.working-directory }}
 
       steps:
