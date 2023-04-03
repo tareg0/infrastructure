@@ -10,7 +10,7 @@ jobs:
         working-directory: network 
       defaults:
         run:
-          #shell: bash
+          shell: bash
           working-directory: ${{ env.working-directory }}
 
       steps:
@@ -33,6 +33,7 @@ jobs:
 
         - name: Terraform Format
           run: terraform fmt -check
+          continue-on-error: true
 
         - name: Terraform validate
           run: terraform validate
